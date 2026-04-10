@@ -1,0 +1,202 @@
+.login {
+    min-height: 100vh;
+    width: 100%;
+    background: #000000;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 0.8s ease-out;
+    text-shadow: 2px 2px 4px rgba(229, 9, 20, 0.3);
+}
+
+.login-form {
+    background: linear-gradient(145deg, #111111, #1a1a1a);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.2);
+    border: 1px solid #570000;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #222222;
+    border: 2px solid #333333;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #e50914;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+    background: #2a2a2a;
+}
+
+.login-form input::placeholder {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(145deg, #e50914, #b80710);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background: linear-gradient(145deg, #ff0f1a, #e50914);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(229, 9, 20, 0.4);
+}
+
+.login-form button:active {
+    transform: translateY(0);
+}
+
+.login p {
+    color: #999999;
+    margin-top: 25px;
+    font-size: 1rem;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.login p a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.login p a:hover {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.login p a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e50914;
+    transition: width 0.3s ease;
+}
+
+.login p a:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для скроллбара */
+.login::-webkit-scrollbar {
+    width: 10px;
+    background: #000000;
+}
+
+.login::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #333, #e50914);
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.login::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e50914, #ff4d4d);
+}
+
+.login::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .login h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .login-form {
+        padding: 30px;
+        max-width: 350px;
+        margin: 0 20px;
+    }
+
+    .login-form input {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .login-form button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .login p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .login-form {
+        padding: 25px;
+    }
+
+    .login-form input {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .login-form button {
+        padding: 10px;
+    }
+
+    .login p {
+        margin-top: 20px;
+    }
+}
